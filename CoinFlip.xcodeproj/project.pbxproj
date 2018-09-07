@@ -15,6 +15,8 @@
 		9FA0593F2140F3B8002DB497 /* CoinFlipTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA0593E2140F3B8002DB497 /* CoinFlipTests.swift */; };
 		9FA0594A2140F3B8002DB497 /* CoinFlipUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA059492140F3B8002DB497 /* CoinFlipUITests.swift */; };
 		9FA059582140FBF5002DB497 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA059572140FBF5002DB497 /* ResultViewController.swift */; };
+		9FA0596B21422ECF002DB497 /* Coin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA0596A21422ECF002DB497 /* Coin.swift */; };
+		9FA0596D21423182002DB497 /* MainViewController - UISetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA0596C21423182002DB497 /* MainViewController - UISetup.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		9FA059492140F3B8002DB497 /* CoinFlipUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinFlipUITests.swift; sourceTree = "<group>"; };
 		9FA0594B2140F3B8002DB497 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9FA059572140FBF5002DB497 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		9FA0596A21422ECF002DB497 /* Coin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coin.swift; sourceTree = "<group>"; };
+		9FA0596C21423182002DB497 /* MainViewController - UISetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainViewController - UISetup.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,10 +104,10 @@
 			isa = PBXGroup;
 			children = (
 				9FA059292140F3B4002DB497 /* AppDelegate.swift */,
-				9FA0592B2140F3B4002DB497 /* MainViewController.swift */,
 				9FA0592D2140F3B4002DB497 /* Main.storyboard */,
-				9FA059572140FBF5002DB497 /* ResultViewController.swift */,
-				9FA059302140F3B8002DB497 /* Assets.xcassets */,
+				9FA0596F21423204002DB497 /* Controllers */,
+				9FA0596921422EB5002DB497 /* Models */,
+				9FA059712142325D002DB497 /* Resources */,
 				9FA059322140F3B8002DB497 /* LaunchScreen.storyboard */,
 				9FA059352140F3B8002DB497 /* Info.plist */,
 			);
@@ -126,6 +130,48 @@
 				9FA0594B2140F3B8002DB497 /* Info.plist */,
 			);
 			path = CoinFlipUITests;
+			sourceTree = "<group>";
+		};
+		9FA0596921422EB5002DB497 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9FA0596A21422ECF002DB497 /* Coin.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		9FA0596E214231F6002DB497 /* MainVC */ = {
+			isa = PBXGroup;
+			children = (
+				9FA0592B2140F3B4002DB497 /* MainViewController.swift */,
+				9FA0596C21423182002DB497 /* MainViewController - UISetup.swift */,
+			);
+			path = MainVC;
+			sourceTree = "<group>";
+		};
+		9FA0596F21423204002DB497 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				9FA0597021423216002DB497 /* ResultVC */,
+				9FA0596E214231F6002DB497 /* MainVC */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		9FA0597021423216002DB497 /* ResultVC */ = {
+			isa = PBXGroup;
+			children = (
+				9FA059572140FBF5002DB497 /* ResultViewController.swift */,
+			);
+			path = ResultVC;
+			sourceTree = "<group>";
+		};
+		9FA059712142325D002DB497 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9FA059302140F3B8002DB497 /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,8 +305,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FA0596D21423182002DB497 /* MainViewController - UISetup.swift in Sources */,
 				9FA0592C2140F3B4002DB497 /* MainViewController.swift in Sources */,
 				9FA0592A2140F3B4002DB497 /* AppDelegate.swift in Sources */,
+				9FA0596B21422ECF002DB497 /* Coin.swift in Sources */,
 				9FA059582140FBF5002DB497 /* ResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

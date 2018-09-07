@@ -15,15 +15,12 @@ class ResultViewController: UIViewController {
     
     var resultLabel : UILabel!
     
+    var newCoin : Coin!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let randomInt = arc4random_uniform(1)
-        if (randomInt > UInt32(0.5)) {
-            randomFace = "Heads"
-        } else {
-            randomFace = "Tails"
-        }
+
+        newCoin = Coin(0.8)
+        randomFace = newCoin.getRandomFace()
         if (randomFace == faceSelected) {
             displayLabel("Correct!")
         } else {
@@ -32,12 +29,16 @@ class ResultViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.navigationBar.isHidden = false
+    }
+    
     func displayLabel(_ result: String) {
         resultLabel = UILabel(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: 50))
         resultLabel.adjustsFontSizeToFitWidth = true
         resultLabel.center = CGPoint(x: view.frame.width / 2, y: view.frame.height / 2)
         resultLabel.textAlignment = .center
-        resultLabel.text = "You were \(result). It was \(randomFace)"
+        resultLabel.text = "You were \(result). It was \(randomFace!)"
         view.addSubview(resultLabel)
     }
     
